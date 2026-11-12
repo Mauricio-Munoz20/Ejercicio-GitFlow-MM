@@ -193,7 +193,7 @@ Por ejemplo, agrega una breve descripción del sistema en la siguiente sección:
 
 Escribe aquí una descripción breve del sistema:
 
-> Respuesta del estudiante: ...
+> Respuesta del estudiante: Sistema de cálculo de precios y descuentos para clientes según su categoría (por ej: clientes que son estudiantes obtienen un 15% de descuento), desarrollado bajo el flujo de trabajo conocido como Git-Flow. 
 
 Luego realice un commit:
 
