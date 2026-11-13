@@ -1,5 +1,7 @@
 # Práctica: Git-flow e Integración Continua
 
+Nombre: Mauricio Muñoz
+RUT: 21.542.213-5
 Ingeniería de Software, I-2026
 
 ---
@@ -280,37 +282,37 @@ Respuesta: La rama main contiene el código estable y probado listo para producc
 
 ### 2. ¿Por qué la funcionalidad se desarrolló en una rama `feature` y no directamente en `main`?
 
-Respuesta: 
+Respuesta: Porque main debe mantenerse siempre estable y libre de errores o código a medio construir. Trabajar en una rama feature aisla el desarrollo para experimentar y probar sin afectar la versión productiva ni entorpecer el trabajo de otros desarrolladores del equipo.
 
 ---
 
 ### 3. ¿Qué hace el comando `git merge --no-ff`?
 
-Respuesta:
+Respuesta: El comando fuerza a Git a crear siempre un commit de fusión (merge commit de acuerdo al PDF), deshabilitando el avance rápido. Esto garantiza que quede registro histórico explícito en el árbol de que existió una rama separada para esa funcionalidad o release.
 
 ---
 
 ### 4. ¿Qué diferencia habría si Git hiciera un merge con fast-forward?
 
-Respuesta:
+Respuesta: Lo que pasaría es que Git unicamente desplazaría el puntero de la rama hacia el último commit sin crear un nuevo commit de unión. Esto provoca una consecuencia: el historial queda lineal y se pierde el rastro visual + contextual de que esos commits pertenecían a una rama independiente.
 
 ---
 
 ### 5. Después del merge, ¿los commits hechos en `feature/descuento-estudiante` quedan en el historial de `develop`?
 
-Respuesta:
+Respuesta: Afirmativo. Todos los commits individuales realizados en la rama feature forman parte del historial permanente de develop, vinculados a través del commit de merge generado con --no-ff-
 
 ---
 
 ### 6. ¿Qué rol cumple una rama `release`?
 
-Respuesta:
+Respuesta: Sirve como fase de estabilización y preparación de una versión para producción. En ella se realizan tareas menores finales (como actualizar documentación, bump de versión o corregir detalles mínimos de última hora), permitiendo que el resto del equipo siga desarrollando nuevas funcionalidades en develop sin interrupciones.
 
 ---
 
 ### 7. ¿Es posible usar Integración Continua con Git-flow? Justifica brevemente.
 
-Respuesta:
+Respuesta: De hecho, es totalmente recomendable realizar esta práctica. Se pueden configurar pipelines de CI (ej: GitHub Actions) que se active automáticamente al hacer push o abrir Pull Requests hacia rama como develop, release, o main, ejecutando pruebas automáticas, linters y validaciones de seguridad antes de permitir cualquier fusión.
 
 ---
 
