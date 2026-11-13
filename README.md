@@ -274,13 +274,13 @@ Responda las siguientes preguntas directamente en este archivo `README.md`.
 
 ### 1. ¿Cuál es la diferencia entre `main` y `develop` en Git-flow?
 
-Respuesta:
+Respuesta: La rama main contiene el código estable y probado listo para producción (versiones oficiales con tags), mientras que develop es la rama de CI donde se incorporan todas las funcionalidades completadas y sirve como base para el desarrollo del día a día.
 
 ---
 
 ### 2. ¿Por qué la funcionalidad se desarrolló en una rama `feature` y no directamente en `main`?
 
-Respuesta:
+Respuesta: 
 
 ---
 
